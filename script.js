@@ -111,7 +111,7 @@ function onClickCategory (){
     header_page.classList.toggle('header_page__active');
     const section_name = document.querySelector('.section_name');
     section_name.classList.toggle('section_name__active');
-
+    document.querySelector('.search_page').classList.toggle('search_page__active');
 }
 
 
@@ -126,7 +126,6 @@ function onClickNavLink(e) {
         btn_tab.querySelector('img').classList.remove('nav_link__img__active');
     });
     e.currentTarget.classList.add('nav_link__active');
-    console.log(e.currentTarget.querySelector('img'));
     e.currentTarget.querySelector('img').classList.add('nav_link__img__active');
     
     const nav_link = e.currentTarget.querySelector('.nav_link').querySelector('span');
