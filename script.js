@@ -13,10 +13,10 @@ class Service {
         <div class="product_img">
             <a href="#"><img src="${this.img}" alt=""></a>
         </div>
-        <div class="product_btn">
+        <a class="product_btn">
             <div class="product_btn__p">Подробнее</div>
             <img src="img/Circl.png" alt="">
-        </div>
+        </a>
         <div class="product_info">
             <a href="#">${this.title}</a>
             <p>${this.description}</p>
@@ -111,6 +111,7 @@ function onClickCategory (){
     header_page.classList.toggle('header_page__active');
     const section_name = document.querySelector('.section_name');
     section_name.classList.toggle('section_name__active');
+
 }
 
 
@@ -122,8 +123,11 @@ btn_tabs.forEach(element => {
 function onClickNavLink(e) {
     btn_tabs.forEach(btn_tab => {
         btn_tab.classList.remove('nav_link__active');
+        btn_tab.querySelector('img').classList.remove('nav_link__img__active');
     });
     e.currentTarget.classList.add('nav_link__active');
+    console.log(e.currentTarget.querySelector('img'));
+    e.currentTarget.querySelector('img').classList.add('nav_link__img__active');
     
     const nav_link = e.currentTarget.querySelector('.nav_link').querySelector('span');
     currentCategory.name = nav_link.innerHTML;
