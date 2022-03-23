@@ -365,6 +365,7 @@
 /* root */
 .header_page__active{
     display: grid !important;
+    
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "a a c"
@@ -378,7 +379,6 @@
 }
 .section_name__active{
     transition: 0.8s;
-    margin-bottom: 50px;
     grid-area: a;
 }
 .nav_link__active{
